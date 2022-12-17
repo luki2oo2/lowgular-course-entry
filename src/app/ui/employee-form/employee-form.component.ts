@@ -17,12 +17,7 @@ export class EmployeeFormComponent {
       salary: new FormControl(null, [Validators.required])
     });
 
-  constructor(private _employeeService: EmployeeService) {
-  }
-
-  onEmployeeFormSubmitted(employeeForm: FormGroup): void {
-    alert(`User was successfully aded to the database. Email: ${employeeForm.value.email}, Age: ${employeeForm.value.age}, Salary: ${employeeForm.value.salary}`)
-  }
+  constructor(private _employeeService: EmployeeService) {}
 
   onFormSubmitted(form: CreateEmployeeModel) {
     this._employeeService.create({
