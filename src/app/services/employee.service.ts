@@ -6,8 +6,7 @@ import { CreateEmployeeModel } from '../model/create-employee.model';
 
 @Injectable()
 export class EmployeeService {
-  constructor(private _httpClient: HttpClient) {
-  }
+  constructor(private _httpClient: HttpClient) {}
 
   getAll(): Observable<PersonModel[]> {
     return this._httpClient.get<PersonModel[]>('assets/data/people.json');
