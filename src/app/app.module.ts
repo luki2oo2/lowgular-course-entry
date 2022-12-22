@@ -21,7 +21,8 @@ import { EmployeeFormComponentModule } from "./ui/employee-form/employee-form.co
     EmployeeServiceModule,
     ProjectServiceModule,
     ProjectListComponentModule,
-    EmployeeFormComponentModule
+    EmployeeFormComponentModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],
