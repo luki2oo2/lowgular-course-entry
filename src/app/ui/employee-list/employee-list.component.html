@@ -1,8 +1,0 @@
-<h1>{{ title }}</h1>
-<ul *ngIf="data$ | async as data; else empty">
-  <li *ngFor="let employee of data">
-    {{ employee.personalNumber }}: {{ employee.name }} Email: {{employee.mail}}<button (click)="remove(employee.personalNumber)">remove</button>
-  </li>
-</ul>
-
-<ng-template #empty> There is no data </ng-template>
