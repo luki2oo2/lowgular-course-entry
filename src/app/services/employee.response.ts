@@ -1,7 +1,7 @@
 export interface EmployeeResponse {
-  id: string;
-  employee_name:string;
-  employee_salary:string;
-  employee_age:string;
-  profile_image:string;
+  readonly id: string;
+  readonly employee_name: string;
+  readonly employee_salary: string;
+  readonly employee_age: string;
+  readonly profile_image: string;
 }

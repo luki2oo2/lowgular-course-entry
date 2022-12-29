@@ -1,0 +1,18 @@
+<form [formGroup]="employeeForm"
+      (ngSubmit)="[onFormSubmitted(employeeForm.value), onButtonClicked(employeeForm.value)]">
+  <input type="text" formControlName="name" placeholder="Name">
+  <input type="text" formControlName="age" placeholder="Age">
+  <input type="text" formControlName="salary" placeholder="Salary">
+  <input type="submit" value="Submit">
+</form>
+
+
+<div class="employee-info-modal">
+    <span *ngIf="employeeForm.valid">
+        <h3>Your new employee:</h3>
+        <p>Name: {{ employeeForm.value.name }}</p>
+        <p>age: {{ employeeForm.value.age }}</p>
+        <p>Salary: {{ employeeForm.value.salary }}$</p>
+        <h3>will be added to the system.</h3>
+    </span>
+</div>

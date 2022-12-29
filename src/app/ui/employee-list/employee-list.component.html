@@ -1,0 +1,17 @@
+<h3>Employee list</h3>
+<table *ngIf="data$ | async as data; else empty">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let employee of data">
+    <td>{{ employee.personalNumber }}</td>
+    <td> {{ employee.name }}</td>
+    <td>{{ employee.mail }}</td>
+    <td><button (click)="remove(employee.personalNumber)">Remove me</button></td>
+  </tr>
+</table>
+
+<ng-template #empty>There is no data</ng-template>
