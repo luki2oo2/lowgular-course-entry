@@ -1,2 +1,9 @@
-<app-employee-form></app-employee-form>
-<app-employee-list></app-employee-list>
+<!--<app-employee-form></app-employee-form>-->
+<!--<app-employee-list></app-employee-list>-->
+<router-outlet></router-outlet>
+<div>
+  <a [routerLink]="['/employee-list']">go to list of employee</a>
+</div>
+<div>
+  <a [routerLink]="['/employee-form']">go to form</a>
+</div>
